@@ -1,0 +1,26 @@
+{
+  "description": "Reference configuration for connecting Hermes Agent to the existing HyperResearch MCP server. Hermes config is normally YAML under ~/.hermes/config.yaml; translate this object into the mcp_servers section.",
+  "mcp_servers": {
+    "hyperresearch": {
+      "command": "hyperresearch",
+      "args": ["mcp"],
+      "enabled": true,
+      "timeout": 120,
+      "connect_timeout": 30,
+      "tools": {
+        "include": [
+          "search_notes",
+          "read_note",
+          "read_many",
+          "list_notes",
+          "get_backlinks",
+          "get_hubs",
+          "vault_status",
+          "lint_vault"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}
